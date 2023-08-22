@@ -1,11 +1,11 @@
 # Raspberry Pi Host and USB Emulator for PS4 9.00  
 
-## Local PS4 Jailbreak Host with USB emulation by samarth05
-This project is an updated and cleaned downed version of PS4JbEmu by CrazeeGhost with Updated GoldHen and Other Payloads.<br>
-It creates a local web host with USB emulation on Raspberry Pi that can be used to Exploit and Jailbreak PS4 consoles running Firmware Version 9.00.<br>
-Raspberry Pi Zero W / Pi Zero 2 W / Pi4 B are eligible boards as they support a USB on-the-go (OTG) gadget mode which eliminates the need to Manually Insert and Remove the USB Stick required in the Exploit Process.<br>
-This project is implemented on a clean Raspberry Pi OS (Debian) install which makes it easier to repurpose the Pi to run additional applications and services on it.<br>
-Developed and Tested on Raspberry Pi Zero W (May work on Other Raspberry Pi's if you follow the Advance Method Mentioned Below).
+## Local PS4 Jailbreak Host with USB Emulation by samarth05
+This project is an Updated and Cleaned Downed Version of PS4JbEmu by CrazeeGhost with Updated GoldHen and Other Payloads.<br>
+It creates a Local Web Host with USB emulation on Raspberry Pi that can be used to Exploit and Jailbreak PS4 consoles running Firmware Version 9.00.<br>
+Raspberry Pi Zero W / Pi Zero 2 W / Pi4 B are eligible boards as they support a USB On-The-Go (OTG) Gadget Mode which Eliminates the need to Manually Insert and Remove the USB Stick required in the Exploit Process.<br>
+This Project is Implemented on a Clean Raspberry Pi OS (Debian) Install which makes it easier to repurpose the Pi to run Additional Applications and Services on it.<br>
+Developed and Tested on Raspberry Pi Zero W (May work on Other Raspberry Pi's if you follow the Manual Method Mentioned Below).
 
 ### Benefits
 - Clean Raspberry Pi OS install - Easily Setup Raspberry Pi for any other purposed if required.
@@ -25,7 +25,7 @@ COMING SOON!
 3. Prevent the Pi from automatically becoming a USB gadget on every boot <br />
    a. Add `sudo /sbin/modprobe -r g_mass_storage` to `/etc/rc.local`
 5. Install and setup `lighttpd` and `PHP`.<br>
-Run : `sudo apt-get install lighttpd` and `sudo apt-get install php`
+   Run : `sudo apt-get install lighttpd` and `sudo apt-get install php`
 6. Configure `/var/www/html/ps4` as the document root directory for the exploit app (via `lighttpd` configs)
 7. Clone or download the source code from this repo <br>
    a. `cd /home/pi` <br>
@@ -47,7 +47,7 @@ For Raspberry Pi Zero W, plug the Cable to Port marked as 'USB' on the Board.<br
 ![image](https://user-images.githubusercontent.com/2664857/149229582-18780783-6d47-4d12-89ab-1898da33e1c7.png)<br/>
 2. After Powering Up the PS4, it should Simultaneously Boot up the Pi and Connect the PS4 to the same network as your Raspberry Pi.
 3. Go to PS4 Web Browser and type in your Pi's IP Address as below:<br>
-http://IP.ADDRESS.OF.PI/ps4 (e.g.: http://192.168.0.0/ps4) and the Exploit Host Page will be opened. It will Cache Some Files and Re-Open The Page Again.
+http://ip.address.of.pi/ps4 (e.g.: http://192.168.0.0/ps4) and the Exploit Host Page will be opened. It will Cache Some Files and Re-Open The Page Again.
 4. Click on GoldHEN Button and a Web Popup will appear showing USB Emulation Started. Wait until the PS4 pop up saying 'This USB Storage device's file system is unsupported' comes and disappeares and Click OK.<br>
 ![image](https://user-images.githubusercontent.com/20742243/151671687-3a16a6db-a56e-45d8-bc13-9ff76598949d.png)<br/>
 5. Then GoldHEN v2.3 will run automatically with BinLoader.

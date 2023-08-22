@@ -25,15 +25,16 @@ COMING SOON!
 3. Prevent the Pi from automatically becoming a USB gadget on every boot <br />
    a. Add `sudo /sbin/modprobe -r g_mass_storage` to `/etc/rc.local`
 5. Install and setup `lighttpd` and `PHP`.<br>
-   Run : `sudo apt-get install lighttpd` and `sudo apt-get install php`
+   a. `sudo apt-get install lighttpd` <br>
+   b. `sudo apt-get install php`
 6. Configure `/var/www/html/ps4` as the document root directory for the exploit app (via `lighttpd` configs)
-7. Clone or download the source code from this repo <br>
+7. Clone or download the source code from this repository. <br>
    a. `cd /home/pi` <br>
    b. `sudo git clone https://github.com/samarth05/PS4RaspiEmu.git` <br />
    c. `sudo git config --global --add safe.directory /home/pi/PS4RaspiEmu`
-8. Allow the webserver user to run some commands as root without password <br>
+8. Allow the Webserver user to run some commands as root without password <br>
    a. Add `www-data ALL = NOPASSWD: /sbin/modprobe, /sbin/reboot, /sbin/shutdown, /var/www/html/ps4/updateHost.sh` to your `sudoers` file using the `visudo` command
-9. Make the web app accessible to the webserver <br />
+9. Make the Web app accessible to the Webserver <br />
    a. `sudo chmod 755 /home/pi/PS4RaspiEmu/updateHost.sh` <br />
    b. `sudo /home/pi/PS4RaspiEmu/updateHost.sh`
 
